@@ -1,0 +1,25 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local reference material and unrelated downloads
+/literature/
+/local_only/
+
+# LTspice-generated data; keep schematics, models, notes, and plots
+*.raw
+*.log
+*.net
+*.op.raw
+/archive/bootstrapping/**/*.lib
+/archive/bootstrapping/Simulations/*/bootstrapping.txt
+
+# Generated LaTeX files and duplicate template archive
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+/templates/*.zip
