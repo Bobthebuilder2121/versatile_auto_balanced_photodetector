@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pybis2spice"
+version = "1.2+git.5466186"
+description = "Locally packaged upstream IBIS-to-SPICE converter"
+requires-python = ">=3.8"
+dependencies = ["ecdtools==0.7.0", "numpy>=1.23"]
+
+[tool.setuptools.packages.find]
+include = ["pybis2spice*"]

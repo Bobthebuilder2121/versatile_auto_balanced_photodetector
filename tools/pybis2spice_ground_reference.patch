@@ -1,0 +1,12 @@
+diff --git a/pybis2spice/subcircuit.py b/pybis2spice/subcircuit.py
+--- a/pybis2spice/subcircuit.py
++++ b/pybis2spice/subcircuit.py
+@@ -173,7 +173,7 @@ def define_pwr_and_gnd_clamps(ibis_data, corner):
+ 
+     if ibis_data.iv_gnd_clamp is not None:
+         return_val += f'V2 GND_CLAMP_REF 0 {gnd_clamp_ref}\n'
+-        gnd_clamp_table_str = convert_iv_table_to_str(ibis_data.iv_gnd_clamp[:, 0] - gnd_clamp_ref,
++        gnd_clamp_table_str = convert_iv_table_to_str(ibis_data.iv_gnd_clamp[:, 0] + gnd_clamp_ref,
+                                                       ibis_data.iv_gnd_clamp[:, _CORNER_INDEX])
+         return_val += f'B2 DIE GND_CLAMP_REF I = table(V(DIE), {gnd_clamp_table_str})\n\n'
+ 

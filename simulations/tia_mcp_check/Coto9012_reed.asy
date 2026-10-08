@@ -1,0 +1,31 @@
+Version 4
+SymbolType CELL
+LINE Normal 0 0 0 14
+LINE Normal 0 48 0 34
+CIRCLE Normal -3 14 3 20
+CIRCLE Normal -3 28 3 34
+LINE Normal 0 31 16 15
+LINE Normal -28 7 -28 41
+LINE Normal -64 8 -64 12
+ARC Normal -76 12 -52 20 -64 12 -64 20
+ARC Normal -76 20 -52 28 -64 20 -64 28
+ARC Normal -76 28 -52 36 -64 28 -64 36
+LINE Normal -64 36 -64 40
+WINDOW 0 24 8 Left 2
+WINDOW 3 24 40 Left 1
+SYMATTR Prefix X
+SYMATTR Value COTO9012_FUNCTIONAL
+SYMATTR ModelFile Coto9012_control.lib
+SYMATTR Description Coto 9012-12-10 functional relay approximation
+PIN 0 0 TOP 8
+PINATTR PinName P
+PINATTR SpiceOrder 1
+PIN 0 48 BOTTOM 8
+PINATTR PinName N
+PINATTR SpiceOrder 2
+PIN -64 8 LEFT 8
+PINATTR PinName CP
+PINATTR SpiceOrder 3
+PIN -64 40 LEFT 8
+PINATTR PinName CN
+PINATTR SpiceOrder 4

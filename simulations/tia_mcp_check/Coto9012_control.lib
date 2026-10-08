@@ -1,0 +1,18 @@
+* Coto 9012-12-10 FUNCTIONAL approximation; NOT a manufacturer SPICE model.
+* Contact/static values from Classic-9011-9012-9117 datasheet, rev 05072024.
+* Logic/driver assumed ideal; 0/12 V coil commands only, nominal 25 C.
+* Coil inductance, flyback clamp, exact pickup/dropout, bounce and protection omitted.
+* Operate time 0.35 ms includes bounce; release time 0.1 ms is a maximum.
+* Contact-to-coil 1.4 pF split equally between two terminals to CP is an assumption.
+.subckt COTO9012_FUNCTIONAL P N CP CN
++ params: RCONTACT=0.12 ROPEN=1e12 COPEN=0.7p CCOIL=1.4p
++ RCOIL=750 T_ON=350u T_OFF=100u
+RCOIL CP CN {RCOIL}
+BRAW RAW CN V=if(V(CP,CN)>6,1,0)
+BEN ENABLE CN V=min(delay(V(RAW,CN),T_ON),delay(V(RAW,CN),T_OFF))
+SREED P N ENABLE CN CONTACT
+.model CONTACT SW(Ron={RCONTACT} Roff={ROPEN} Vt=0.5 Vh=0)
+CCONTACT P N {COPEN}
+CPAR_P P CP {CCOIL/2}
+CPAR_N N CP {CCOIL/2}
+.ends COTO9012_FUNCTIONAL

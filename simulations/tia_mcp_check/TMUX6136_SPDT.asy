@@ -1,0 +1,49 @@
+Version 4
+SymbolType CELL
+RECTANGLE Normal -96 -144 96 160
+LINE Normal -96 -80 -24 -80
+LINE Normal -96 -16 -24 -16
+LINE Normal 24 -48 96 -48
+LINE Normal -24 -80 24 -48
+CIRCLE Normal -28 -84 -20 -76
+CIRCLE Normal -28 -20 -20 -12
+LINE Normal -96 48 -32 48
+LINE Normal -32 48 -16 32
+LINE Normal -16 32 0 48
+LINE Normal 0 48 -16 64
+LINE Normal -16 64 -32 48
+LINE Normal 0 -144 0 -112
+LINE Normal -64 128 -64 160
+LINE Normal 64 128 64 160
+TEXT -80 -80 Bottom 2 SA
+TEXT -80 -16 Bottom 2 SB
+TEXT 80 -48 Bottom 2 D
+TEXT -80 48 Bottom 2 SEL
+TEXT 0 80 Center 2 TI approx.
+WINDOW 0 64 -144 Bottom 2
+WINDOW 3 0 112 Center 2
+SYMATTR Value TMUX6136_SPDT
+SYMATTR Prefix X
+SYMATTR ModelFile TMUX6136_extended.lib
+SYMATTR Description TMUX6136PWR single-channel IBIS plus datasheet approximation
+PIN -96 48 NONE 8
+PINATTR PinName IN
+PINATTR SpiceOrder 1
+PIN -96 -80 NONE 8
+PINATTR PinName SA
+PINATTR SpiceOrder 2
+PIN 96 -48 NONE 8
+PINATTR PinName D
+PINATTR SpiceOrder 3
+PIN -96 -16 NONE 8
+PINATTR PinName SB
+PINATTR SpiceOrder 4
+PIN -64 160 BOTTOM 8
+PINATTR PinName Vss
+PINATTR SpiceOrder 5
+PIN 64 160 BOTTOM 8
+PINATTR PinName GND
+PINATTR SpiceOrder 6
+PIN 0 -144 TOP 8
+PINATTR PinName Vdd
+PINATTR SpiceOrder 7

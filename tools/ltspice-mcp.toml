@@ -1,0 +1,31 @@
+[simulator]
+default = "ltspice"
+enabled = ["ltspice"]
+path = "/Applications/LTspice.app/Contents/MacOS/LTspice"
+
+[security]
+allowed_paths = ["."]
+
+[simulation]
+max_parallel = 1
+max_experiment_cases = 64
+timeout = 60.0
+max_raw_mb = 256
+
+[analysis]
+max_points = 2000
+analysis_budget_s = 60.0
+
+[schematic]
+symbol_paths = ["/Users/Melvi/Library/Application Support/LTspice/lib/sym"]
+
+[tools]
+listing = "compact"
+run_code = false
+
+[state]
+persist_jobs = true
+preload_recent_count = 0
+
+[logging]
+level = "WARNING"

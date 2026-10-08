@@ -1,0 +1,14 @@
+{
+  "source": "Native LTspice log read immediately after simulation",
+  "start_time_local": "2026-10-08 17:32:34",
+  "simulator": "LTspice 17.2.4 for MacOS",
+  "fixture": "../tmux6136_model_tests.asc",
+  "temperature_c": 27,
+  "run_completed": true,
+  "r_on_ohm": 120,
+  "t_tran_s": 6.54459e-8,
+  "vq_final_v": 0.000399033,
+  "failed_measurements": ["t_bbm", "q_packet"],
+  "rerun_required": true,
+  "active_detector_simulated_with_extended_model": false
+}
